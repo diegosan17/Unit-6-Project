@@ -1,8 +1,10 @@
 $("#expo").hover(function() {
     $(".title").fadeIn(2000);
+    $(".rand").fadeIn(2000);
     $(".yes").fadeIn(2000);
     $(".no").fadeIn(2000);
     $("#expo").fadeOut(1000);
+    
 });
 $(".yes").click(function() {
     $("#food").fadeIn(2000);
@@ -21,7 +23,9 @@ $(".no").click(function() {
 $("#food").click(function() {
     $("#food").fadeOut(2000);
     $("#toys").fadeIn(2000);
+    $("#pickone").text("Double click on the image to decide what toy you want to get.");
     $("#pickone").fadeIn(2000);
+    
 });
 $("#aisles").click(function() {
     $("#food").fadeOut(2000);
@@ -65,9 +69,17 @@ $(".self").click(function(){
     $("#pay").text("You showed up to your cousins party late, but he liked your gift. The End");
     $(".self").hide();
     $(".reg").hide();
+    $(".reset").show();
 });
 $(".reg").click(function(){
     $("#pay").text("Nice time to go to your cousins party and give your gift. The End");
     $(".self").hide();
     $(".reg").hide();
+    $(".reset").show();
+});
+$(".reset").click(function(){
+    $(".reg").hide();
+    $(".reset").hide();
+    $("#expo").show();
+    $("#pay").hide();
 });
